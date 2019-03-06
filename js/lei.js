@@ -45,29 +45,23 @@
 /**  存取器
  *
  */
-var passcode = "secret passcode";
-var Employee = /** @class */ (function () {
-    function Employee() {
-    }
-    Object.defineProperty(Employee.prototype, "fullName", {
-        get: function () {
-            return this._fullName;
-        },
-        set: function (newName) {
-            if (passcode && passcode == "secret passcode") {
-                this._fullName = newName;
-            }
-            else {
-                console.log("Error: Unauthorized update of employee!");
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Employee;
-}());
-var employee = new Employee();
-employee.fullName = "Bob Smith";
-if (employee.fullName) {
-    alert(employee.fullName);
-}
+// let passcode = "secret passcode";
+// class Employee {
+//     private _fullName: string;
+//     get fullName(): string {
+//         return this._fullName;
+//     }
+//     set fullName(newName: string) {
+//         if (passcode && passcode == "secret passcode") {
+//             this._fullName = newName;
+//         }
+//         else {
+//             console.log("Error: Unauthorized update of employee!");
+//         }
+//     }
+// }
+// let employee = new Employee();
+// employee.fullName = "Bob Smith";
+// if (employee.fullName) {
+//     alert(employee.fullName);
+// }
